@@ -1,7 +1,8 @@
 package linkedlist;
 
-public class sum {
+public class Sum {
     Node head;
+    Node tail;
 
     class Node {
         int data;
@@ -15,20 +16,15 @@ public class sum {
 
     public void add(int data) {
         Node newNode = new Node(data);
-        newNode.next = null;
-
         if (head == null) {
-            head = newNode;
+            head = tail = newNode;
         } else {
-            Node last = head;
-            while (last.next != null) {
-                last = last.next;
-            }
-            last.next = newNode;
+            tail.next = newNode;
+            tail = newNode;
         }
     }
 
-    public int addsum() {
+    public int addSum() {
         Node current = head;
         int sum = 0;
         while (current != null) {
@@ -37,29 +33,91 @@ public class sum {
         }
         return sum;
     }
-    public int indexof(int value)
-    {
-        int index=0;
-        Node current=head;
-        while(current!=null)
-        {
-            if(current.data==value)
-            {
+
+    public int indexOf(int value) {
+        int index = 0;
+        Node current = head;
+        while (current != null) {
+            if (current.data == value) {
                 return index;
             }
             index++;
-            current=current.next;
+            current = current.next;
         }
         return -1;
     }
 
+    public void insertAtFirst(int value) {
+        Node newNode = new Node(value);
+        if (head == null) {
+            head = tail = newNode;
+        } else {
+            newNode.next = head;
+            head = newNode;
+        }
+    }
+
+    public void insertAtSpecific(int index, int value) {
+        if (index == 0) {
+            insertAtFirst(value);
+            return;
+        }
+
+        Node newNode = new Node(value);
+        Node current = head;
+        for (int i = 0; current != null && i < index - 1; i++) {
+            current = current.next;
+        }
+        if (current != null) {
+            newNode.next = current.next;
+            current.next = newNode;
+            if (newNode.next == null) { // Update tail if newNode is inserted at the end
+                tail = newNode;
+            }
+        }
+    }
+
+    public void reverse() {
+        Node current = head;
+        Node prev = null;
+        Node next = null;
+        while (current != null) {
+            next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+        }
+        head = prev;
+    }
+
+    public void printList() {
+        Node current = head;
+        while (current != null) {
+            System.out.print(current.data + " ");
+            current = current.next;
+        }
+        System.out.println();
+    }
+
     public static void main(String[] args) {
-        sum list = new sum();
+        Sum list = new Sum();
         list.add(10);
         list.add(20);
         list.add(40);
         list.add(23);
-        System.out.println("Sum of elements in list: " + list.addsum());
-        System.out.println("INDEX OF="+ list.indexof(20));
+        System.out.println("Sum of elements in list: " + list.addSum());
+        System.out.println("Index of 20: " + list.indexOf(20));
+        list.insertAtFirst(70);
+        System.out.println("Index of 70 after insertion at first: " + list.indexOf(70));
+        list.insertAtSpecific(2, 35);
+        System.out.println("Index of 35 after insertion at specific index: " + list.indexOf(35));
+        
+        System.out.print("Original list: ");
+        list.printList();
+        
+        list.reverse();
+        
+        System.out.print("Reversed list: ");
+        list.printList();
     }
 }
