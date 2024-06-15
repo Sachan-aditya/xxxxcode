@@ -4,7 +4,6 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class create {
-
     public static void main(String args[])
     {
         List<Integer> list= new LinkedList<>();
