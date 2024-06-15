@@ -30,14 +30,14 @@ public class create {
     }
 
     public void printList() {
-        Node currNode = head;
+        Node current= head;
 
-        while (currNode != null) {
+        while (current != null) {
             
-            System.out.print(currNode.data);
-            if(currNode.next!=null)
+            System.out.print(current.data);
+            if(current.next!=null)
             System.out.print("-->");
-            currNode = currNode.next;
+            current = current.next;
         }
     }
 
