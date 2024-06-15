@@ -35,18 +35,17 @@ public class Node {
 }
 
 }
-*************************************************************
-2. super
+
+```
+##  super
 Refers to the parent class.
 Like saying "my parent".
 Used to access the parent class's fields or methods.
 Code Example:
 
-java
 
-Open In Editor
-Edit
-Copy code
+
+```java
 public class Animal {
     void sound() {
         System.out.println("The animal makes a sound");
@@ -59,16 +58,14 @@ public class Dog extends Animal {
         System.out.println("The dog barks");
     }
 }
-3. static
+```
+
+## static
 Means that something belongs to the class, not to an individual object.
 Like a shared resource that all objects of the class can use.
 Code Example:
 
-java
-
-Open In Editor
-Edit
-Copy code
+```java
 public class MyClass {
     static int count = 0; // Shared variable among all objects
 
@@ -76,16 +73,13 @@ public class MyClass {
         count++; // Increment the shared variable
     }
 }
-4. final
+```
+### final
 Means that something cannot be changed.
 Like a constant value that never changes.
 Code Example:
 
-java
-
-Open In Editor
-Edit
-Copy code
+```java
 public class MyClass {
     final int MAX_VALUE = 100; // Constant value
 
@@ -93,12 +87,14 @@ public class MyClass {
         // MAX_VALUE cannot be changed
     }
 }
-5. abstract
+```
+
+## abstract
 Means that something is incomplete and needs to be finished by someone else.
 Like a blueprint that needs to be filled in.
 Code Example:
 
-java
+```java
 
 Open In Editor
 Edit
@@ -116,16 +112,13 @@ public class Dog extends Animal {
         System.out.println("The dog barks");
     }
 }
-6. interface
+```
+## interface
 Like a contract that says "I promise to do these things".
 A way for classes to agree to implement certain methods.
 Code Example:
 
-java
-
-Open In Editor
-Edit
-Copy code
+```java
 public interface Printable {
     void print();
 }
@@ -135,12 +128,13 @@ public class Document implements Printable {
         System.out.println("Printing the document");
     }
 }
-7. enum
+```
+## enum
 Like a list of named values.
 A set of constants that have names.
 Code Example:
 
-java
+```java
 
 Open In Editor
 Edit
@@ -164,16 +158,14 @@ public class MyClass {
         }
     }
 }
-8. synchronized
+```
+## synchronized
 Means that only one thread can access something at a time.
 Like a lock that prevents multiple threads from accessing the same resource simultaneously.
 Code Example:
 
-java
+```java
 
-Open In Editor
-Edit
-Copy code
 public class MyClass {
     private int count = 0;
 
@@ -181,16 +173,13 @@ public class MyClass {
         count++;
     }
 }
-9. volatile
+```
+## volatile
 Means that a variable's value can change unexpectedly.
 Like a warning sign that says "be careful, this value might change suddenly".
 Code Example:
 
-java
-
-Open In Editor
-Edit
-Copy code
+```java
 public class MyClass {
     private volatile boolean flag = false;
 
@@ -200,16 +189,13 @@ public class MyClass {
         }
     }
 }
-10. transient
+```
+## transient
 Means that a field should not be saved when an object is serialized.
 Like a note that says "don't save this field".
 Code Example:
+```java
 
-java
-
-Open In Editor
-Edit
-Copy code
 public class MyClass implements Serializable {
     private transient int tempValue; // Don't serialize this field
 
@@ -219,12 +205,14 @@ public class MyClass implements Serializable {
         this.name = name;
     }
 }
-11. native
+```
+
+## native
 Means that a method is implemented in a language other than Java.
 Like a special instruction that says "use this other language to do this".
 Code Example:
 
-java
+```java
 
 Open In Editor
 Edit
@@ -232,6 +220,7 @@ Copy code
 public class MyClass {
     native void doSomething(); // Implemented in a native language
 }
-12. strictfp
+```
+## strictfp
 Means that floating-point operations should be precise and follow certain rules.
 Like a warning sign that says "be careful with floating-point math".
