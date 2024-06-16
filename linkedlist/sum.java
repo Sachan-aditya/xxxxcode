@@ -105,6 +105,7 @@ public class Sum {
         list.add(20);
         list.add(40);
         list.add(23);
+        list.add(73);
         System.out.println("Sum of elements in list: " + list.addSum());
         System.out.println("Index of 20: " + list.indexOf(20));
         list.insertAtFirst(70);
