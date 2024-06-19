@@ -27,6 +27,10 @@ public class stack1 {
         }
         return sc.toString();
     }
+    public int size()
+    {
+        return top;
+    }
 
     public static void main(String args[])
     {
@@ -36,6 +40,8 @@ public class stack1 {
         stack.push(3);
         stack.push(4);
         stack.push(5);
+        stack.push(6);
+       System.out.println("THe size of stack"+stack.size());
         System.out.println(stack);
     }
 }
