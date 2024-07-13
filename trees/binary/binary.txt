@@ -1,4 +1,0 @@
-binary tree can have atmost 2 children ///  ATMOST 2
-CAN BE O ,1 OR 2
-NOT MORE THAN THAT
-

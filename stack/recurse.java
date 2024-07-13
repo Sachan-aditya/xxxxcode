@@ -1,6 +1,5 @@
 import java.util.* ;
-import java.io.*; 
-public class Solution 
+public class recurse 
 {
   public static Stack<Integer> pushAtBottom(Stack <Integer> mystack, int x) 
   {

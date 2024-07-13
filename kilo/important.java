@@ -1,3 +1,5 @@
+package kilo;
+
 class Solution {
     public boolean checkIfPangram(String s) {
        boolean ar[]=new boolean[26];
