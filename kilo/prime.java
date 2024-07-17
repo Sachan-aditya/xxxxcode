@@ -1,6 +1,6 @@
 package kilo;
 import java.util.*;
-class Solution {
+class sort {
     public int countPrimes(int n) {
         boolean[] prime=new boolean[n+1];
         Arrays.fill(prime,true);

@@ -3,7 +3,7 @@ package common;
 
 import java.util.Arrays;
 
-class Solution {
+class common {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         
       int n = nums1.length;

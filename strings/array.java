@@ -1,4 +1,5 @@
-class Solution {
+class lifo
+{
     int i = 0;
     public String reverseParentheses(String s) {
         char[] ar = s.toCharArray();

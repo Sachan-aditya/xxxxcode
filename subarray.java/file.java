@@ -1,4 +1,4 @@
-class Solution {
+class panagram {
     public int subarraysDivByK(int[] nums, int k) {
  int c=0;
        for(int i=0;i<nums.length;i++)
