@@ -9,8 +9,9 @@ public class arraylist {
         list.add(1);
         list.add(2);
         list.add(3);
-        
+        int element=list.get(0);
         System.out.println(list);
+        System.out.println(element);
 
     }
     
