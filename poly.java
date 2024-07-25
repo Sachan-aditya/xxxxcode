@@ -1,4 +1,4 @@
-Illustration 3.29			// Polymorphism concept //
+			// Polymorphism concept //
 
 class Point {
     int x,y;
