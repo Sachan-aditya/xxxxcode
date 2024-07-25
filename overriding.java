@@ -32,5 +32,4 @@ class Main {
         Parent obj2 = new Child();
         obj2.show();
     }
-}
-g
+}//hen a method in a subclass has the same name, the same parameters or signature, and the same return type(or sub-type) as a method in its super-class, then the method in the subclass is said to override the method in the super-class.
