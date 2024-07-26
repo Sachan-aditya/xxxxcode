@@ -48,8 +48,19 @@ public static void inorder(Node root)
     if(root==null)
     return;
     inorder(root.left);
-    System.out.println(root.data+"");
+    System.out.print(root.data+"");
     inorder(root.right);
+}
+//postorder-left right root
+public static void postorder(Node root)
+{
+
+    if(root==null)
+    return;
+    inorder(root.left);
+    inorder(root.right);
+    System.out.print(root.data+"");
+   
 }
     public static void main(String[] args) {
         int[] nodes = {1, 2, 3, 4, 5, -1, 2, 4, 7, 9, 0, 1, -1, -1};
@@ -57,5 +68,6 @@ public static void inorder(Node root)
         System.out.println(root.data);
         preorder(root);
         inorder(root);
+        postorder(root);
     }
 }
