@@ -1,5 +1,8 @@
 package trees;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 
 public class traversal {
     static class Node {
@@ -62,6 +65,42 @@ public static void postorder(Node root)
     System.out.print(root.data+"");
    
 }
+//level order --level wise
+public static void Levelorder(Node root)
+{
+    if(root==null)
+    return ;
+    Queue<Node> q=new LinkedList<>();
+    q.add(root);
+    q.add(null);
+    while(!q.isEmpty())
+    {
+        Node current=q.remove();
+        if(current==null)
+        {
+            System.out.println();
+            if(q.isEmpty())
+            break;
+            else
+            q.add(null);
+        }
+        else
+        {
+            System.out.println(current.data+"");
+             if(current.left!=null)
+             {
+                q.add(current.left);
+             }
+             else
+                {
+                    if(current.right!=null)
+                    {
+                        q.add(current.right);
+                    }
+    } 
+}
+}
+}
     public static void main(String[] args) {
         int[] nodes = {1, 2, 3, 4, 5, -1, 2, 4, 7, 9, 0, 1, -1, -1};
         Node root = BinaryTreeHelper.buildTree(nodes);
@@ -69,5 +108,6 @@ public static void postorder(Node root)
         preorder(root);
         inorder(root);
         postorder(root);
+        Levelorder(root);
     }
 }
