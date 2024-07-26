@@ -42,11 +42,20 @@ System.out.print(root.data+"");
 preorder(root.left);
 preorder(root.right);
 }
-
+//inorder --left,root,right
+public static void inorder(Node root)
+{
+    if(root==null)
+    return;
+    inorder(root.left);
+    System.out.println(root.data+"");
+    inorder(root.right);
+}
     public static void main(String[] args) {
         int[] nodes = {1, 2, 3, 4, 5, -1, 2, 4, 7, 9, 0, 1, -1, -1};
         Node root = BinaryTreeHelper.buildTree(nodes);
         System.out.println(root.data);
         preorder(root);
+        inorder(root);
     }
 }
