@@ -1,7 +1,8 @@
 import java.util.HashMap;
 import java.util.Map;
 
-class Solution {
+class roman
+{
     public int romanToInt(String s) {
         Map<Character,Integer> map=new HashMap<>();// if compare use this // if single occurence sets
          map.put('I', 1);
@@ -23,5 +24,10 @@ class Solution {
         prev=current;
     }
     return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Solution []";
     }
 }

@@ -1,0 +1,38 @@
+Hashing Techniques
+
+Chaining (Linked List)
+Store colliding elements in a linked list
+Good for sparse tables, poor for dense tables
+Open Addressing
+Probe other slots in the table to find an empty slot
+Variants: Linear Probing, Quadratic Probing, Double Hashing
+Collision Resolution Strategies
+
+Linear Probing
+Probe next slot in sequence: index = (hash(key) + i) % tableSize
+Simple, but can lead to clustering
+Quadratic Probing
+Probe next slot using a quadratic function: index = (hash(key) + i^2) % tableSize
+        Reduces clustering, but still has limitations
+Double Hashing
+Use two hash functions to probe: index = (hash1(key) + i * hash2(key)) % tableSize
+        Good distribution, but can be slow
+Universal Hashing
+Use a hash function that minimizes collisions: hash(key) = ((a * key + b) % p) % tableSize
+        Good distribution, but can be complex to implement
+Other Hashing Techniques
+
+Cuckoo Hashing
+Use two arrays and two hash functions to store elements
+        Good distribution, but can be complex to implement
+Bloom Filters
+Use a bit array to quickly determine if an element is present
+Good for membership testing, but can have false positives
+Perfect Hashing
+Use a two-level hashing scheme to minimize collisions
+        Good distribution, but can be complex to implement
+        Clustering
+
+A phenomenon where colliding elements tend to cluster together in the table
+Can lead to poor performance in open addressing schemes
+        Mitigated by using techniques like quadratic probing, double hashing, or universal hashing

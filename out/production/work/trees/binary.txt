@@ -1,0 +1,7 @@
+binary tree can have atmost 2 children ///  ATMOST 2
+CAN BE O ,1 OR 2
+NOT MORE THAN THAT
+
+bst --data in sorted way  //binary search tree
+smaLL-LEFT  ... LARGE--RIGHT
+bs--data randomly arranged

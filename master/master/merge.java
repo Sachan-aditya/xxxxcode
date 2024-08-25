@@ -1,9 +1,7 @@
-
-package common;
-
+package master;
 import java.util.Arrays;
 
-class common {
+class copy {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         
       int n = nums1.length;

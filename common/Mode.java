@@ -1,4 +1,4 @@
-public class Solution {
+public class  Mode {
     public void rotate(int[] nums, int k) {
         int len=nums.length;
         int[] result=new int[len];
